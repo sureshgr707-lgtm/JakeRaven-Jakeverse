@@ -28,3 +28,18 @@ to change for a content update.
 ```bash
 npm run build
 ```
+
+## Access control
+
+The site is gated behind HTTP Basic Auth (`src/proxy.ts`) so only you can view it
+until you're ready to make it public.
+
+- Username: `suresh`
+- Password: set via the `SITE_PASSWORD` environment variable
+
+Locally, this is already set in `.env.local` (gitignored, not committed). For the
+deployed site, add `SITE_PASSWORD` in your hosting provider's environment variable
+settings (e.g. Vercel: Project Settings → Environment Variables) and redeploy.
+
+If `SITE_PASSWORD` is unset, the gate is disabled and the site is fully public —
+that's the state to remove the gate entirely once you're ready to launch.

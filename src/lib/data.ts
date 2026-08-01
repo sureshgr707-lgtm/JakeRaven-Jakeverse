@@ -1,19 +1,16 @@
 // Single source of truth for site content.
-// Swap every value below with your real details.
 
 export const site = {
-  name: "Jake Raven",
+  name: "Suresh G",
   brand: "Jakeverse",
-  role: "Designer & Developer",
-  tagline: "I build fast, thoughtful products at the edge of design and code.",
-  location: "Based on Earth, working everywhere",
-  email: "hello@jakeraven.dev",
+  role: "RCM AI Architect",
+  tagline:
+    "I combine 6+ years of healthcare RCM operations expertise with AI-driven tooling to turn messy operational data into clear, actionable systems.",
+  location: "Chennai, India",
+  email: "sureshgr707@gmail.com",
 };
 
 export const links = {
-  github: "https://github.com/jakeraven",
-  linkedin: "https://linkedin.com/in/jakeraven",
-  twitter: "https://x.com/jakeraven",
   email: `mailto:${site.email}`,
 };
 
@@ -35,66 +32,67 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "aurora",
-    title: "Aurora",
+    slug: "ai-rcm-dashboards",
+    title: "AI-Powered RCM Dashboards",
     summary:
-      "A real-time collaboration tool for design teams, built for speed at scale.",
-    tags: ["Product Design", "React", "WebSockets"],
+      "Designed AI-assisted executive dashboards that turn raw AR and claims data into real-time operational visibility.",
+    tags: ["AI Dashboards", "Data Viz", "Reporting"],
     year: "2025",
-    href: links.github,
   },
   {
-    slug: "pulse",
-    title: "Pulse",
+    slug: "denials-appeals-optimization",
+    title: "Denial & Appeals Workflow Optimization",
     summary:
-      "An analytics dashboard that turns raw event data into decisions in seconds.",
-    tags: ["Data Viz", "TypeScript", "Next.js"],
+      "Streamlined denial review and appeals workflows to cut resolution time and improve first-pass claim recovery.",
+    tags: ["Denials & Appeals", "Process Improvement"],
     year: "2024",
-    href: links.github,
   },
   {
-    slug: "north",
-    title: "North",
+    slug: "payer-change-automation",
+    title: "Payer Change & Authorization Tracking",
     summary:
-      "A minimal, fast note-taking app with offline-first sync across devices.",
-    tags: ["Mobile", "Swift", "CRDTs"],
+      "Built structured tracking systems for payer change, authorization follow-up, and split-chart workflows.",
+    tags: ["Automation", "Payer Coordination"],
     year: "2024",
-    href: links.github,
   },
   {
-    slug: "signal",
-    title: "Signal",
+    slug: "production-reporting",
+    title: "Production & Performance Reporting",
     summary:
-      "Brand identity and design system for an early-stage climate-tech startup.",
-    tags: ["Branding", "Design System"],
+      "Automated production tracking and reporting frameworks for AR teams, cutting manual reporting time significantly.",
+    tags: ["Excel", "Power BI", "Automation"],
     year: "2023",
-    href: links.github,
   },
 ];
 
 export const skills = [
-  "Product Strategy",
-  "Interaction Design",
-  "Design Systems",
-  "React / Next.js",
-  "TypeScript",
-  "Motion & Prototyping",
+  "AR Operations",
+  "Denials & Appeals",
+  "Authorization Follow-up",
+  "Payer Coordination",
+  "Process Improvement",
+  "AI-Assisted Reporting",
+  "Excel & Power BI",
+  "Python",
+  "HIPAA Compliance",
 ];
 
 export const timeline = [
   {
-    year: "2024 — Now",
-    title: "Independent Designer & Developer",
-    detail: "Partnering with startups on product design and full-stack builds.",
+    year: "2025 — Present",
+    title: "Subject Matter Expert → RCM AI Architect",
+    detail:
+      "Applying AI tools to build dashboards, automate reporting, and modernize healthcare RCM operational workflows.",
   },
   {
-    year: "2021 — 2024",
-    title: "Senior Product Designer",
-    detail: "Led design for core product surfaces, scaling a small team's output 3x.",
+    year: "2019 — 2025",
+    title: "AR Associate → Senior AR Associate → SME",
+    detail:
+      "6+ years progressing through healthcare RCM roles — denial management, appeals, authorization follow-up, and payer coordination.",
   },
   {
-    year: "2019 — 2021",
-    title: "Product Designer",
-    detail: "Shipped design systems and features across web and mobile.",
+    year: "Education",
+    title: "B.Tech, Computer Science & Engineering",
+    detail: "Dr. MGR University, Chennai.",
   },
 ];

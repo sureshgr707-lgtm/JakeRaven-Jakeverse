@@ -14,7 +14,7 @@ export default function Work() {
         className="animate-fade-up mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-5xl"
         style={{ animationDelay: "80ms" }}
       >
-        Selected projects
+        Selected work
       </h1>
       <p
         className="animate-fade-up mt-6 max-w-xl text-lg leading-8 text-muted"
@@ -24,39 +24,58 @@ export default function Work() {
       </p>
 
       <div className="mt-16 grid gap-6 sm:grid-cols-2">
-        {projects.map((project, i) => (
-          <Link
-            key={project.slug}
-            href={project.href ?? "#"}
-            target={project.href ? "_blank" : undefined}
-            rel={project.href ? "noopener noreferrer" : undefined}
-            className="animate-fade-up group rounded-2xl border border-border/60 p-6 transition-colors hover:border-foreground/30"
-            style={{ animationDelay: `${i * 80}ms` }}
-          >
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-medium">{project.title}</h2>
-              <span className="font-mono text-xs text-muted">
-                {project.year}
-              </span>
-            </div>
-            <p className="mt-3 text-sm leading-6 text-muted">
-              {project.summary}
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-border/60 px-3 py-1 text-xs text-muted"
-                >
-                  {tag}
+        {projects.map((project, i) => {
+          const Card = (
+            <>
+              <div className="flex items-center justify-between">
+                <h2 className="text-lg font-medium">{project.title}</h2>
+                <span className="font-mono text-xs text-muted">
+                  {project.year}
                 </span>
-              ))}
+              </div>
+              <p className="mt-3 text-sm leading-6 text-muted">
+                {project.summary}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-border/60 px-3 py-1 text-xs text-muted"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              {project.href && (
+                <span className="mt-5 inline-block text-sm text-accent opacity-0 transition-opacity group-hover:opacity-100">
+                  View project →
+                </span>
+              )}
+            </>
+          );
+
+          const className =
+            "animate-fade-up group rounded-2xl border border-border/60 p-6 transition-colors" +
+            (project.href ? " hover:border-foreground/30" : "");
+          const style = { animationDelay: `${i * 80}ms` };
+
+          return project.href ? (
+            <Link
+              key={project.slug}
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={className}
+              style={style}
+            >
+              {Card}
+            </Link>
+          ) : (
+            <div key={project.slug} className={className} style={style}>
+              {Card}
             </div>
-            <span className="mt-5 inline-block text-sm text-accent opacity-0 transition-opacity group-hover:opacity-100">
-              View project →
-            </span>
-          </Link>
-        ))}
+          );
+        })}
       </div>
 
       <div className="mt-20 rounded-2xl border border-border/60 p-10 text-center">

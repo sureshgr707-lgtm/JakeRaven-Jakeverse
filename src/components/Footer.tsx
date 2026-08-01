@@ -1,12 +1,7 @@
 import Link from "next/link";
 import { links, site } from "@/lib/data";
 
-const socials = [
-  { label: "GitHub", href: links.github },
-  { label: "LinkedIn", href: links.linkedin },
-  { label: "X", href: links.twitter },
-  { label: "Email", href: links.email },
-];
+const socials = [{ label: "Email", href: links.email }];
 
 export default function Footer() {
   return (

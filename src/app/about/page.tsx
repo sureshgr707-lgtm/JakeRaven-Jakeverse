@@ -19,18 +19,19 @@ export default function About() {
         className="animate-fade-up mt-6 text-lg leading-8 text-muted"
         style={{ animationDelay: "160ms" }}
       >
-        I&apos;m a {site.role.toLowerCase()} who cares about the details most
-        people skip — the transition that feels a beat too slow, the copy
-        that almost makes sense. {site.location}. I like building things end
-        to end: from the first sketch to the shipped product.
+        I&apos;m a healthcare RCM professional with 6+ years of experience in
+        AR operations, denial management, appeals, authorization follow-up,
+        and payer coordination — now focused on applying AI to make that work
+        faster and clearer. {site.location}.
       </p>
       <p
         className="animate-fade-up mt-4 text-lg leading-8 text-muted"
         style={{ animationDelay: "200ms" }}
       >
-        Outside of client work, I spend my time exploring new tools, writing
-        about product craft, and looking for the next hard problem worth
-        solving.
+        I build AI-assisted dashboards, trackers, and reporting systems that
+        turn raw operational data into decisions leadership can act on —
+        bringing strong account research, quality documentation, and
+        reporting discipline into everything I ship.
       </p>
 
       <div className="mt-16">

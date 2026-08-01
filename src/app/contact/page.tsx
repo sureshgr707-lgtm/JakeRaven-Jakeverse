@@ -7,13 +7,6 @@ export const metadata: Metadata = {
   title: `Contact — ${site.name}`,
 };
 
-const channels = [
-  { label: "Email", value: site.email, href: links.email },
-  { label: "GitHub", value: "@jakeraven", href: links.github },
-  { label: "LinkedIn", value: "/in/jakeraven", href: links.linkedin },
-  { label: "X", value: "@jakeraven", href: links.twitter },
-];
-
 export default function Contact() {
   return (
     <div className="relative mx-auto max-w-3xl px-6 py-24">
@@ -34,27 +27,19 @@ export default function Contact() {
       </p>
 
       <div
-        className="animate-fade-up mt-12 grid gap-4 sm:grid-cols-2"
+        className="animate-fade-up mt-12 max-w-sm"
         style={{ animationDelay: "240ms" }}
       >
-        {channels.map((channel) => (
-          <Link
-            key={channel.label}
-            href={channel.href}
-            target={channel.href.startsWith("http") ? "_blank" : undefined}
-            rel={
-              channel.href.startsWith("http")
-                ? "noopener noreferrer"
-                : undefined
-            }
-            className="group rounded-2xl border border-border/60 p-6 transition-colors hover:border-foreground/30"
-          >
-            <p className="font-mono text-xs text-muted">{channel.label}</p>
-            <p className="mt-2 text-base font-medium group-hover:text-accent">
-              {channel.value}
-            </p>
-          </Link>
-        ))}
+        <Link
+          href={links.email}
+          className="group block rounded-2xl border border-border/60 p-6 transition-colors hover:border-foreground/30"
+        >
+          <p className="font-mono text-xs text-muted">Email</p>
+          <p className="mt-2 text-base font-medium group-hover:text-accent">
+            {site.email}
+          </p>
+        </Link>
+        <p className="mt-4 text-sm text-muted">{site.location}</p>
       </div>
     </div>
   );

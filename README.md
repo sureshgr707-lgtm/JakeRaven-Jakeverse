@@ -1,6 +1,8 @@
 # Jakeverse
 
-Jake Raven's personal portfolio site, built with Next.js, TypeScript, and Tailwind CSS.
+Suresh G's personal portfolio site, built with Next.js, TypeScript, and Tailwind CSS.
+
+**Live site:** https://jake-raven-jakeverse.vercel.app (password-protected, see [Access control](#access-control))
 
 ## Getting started
 
